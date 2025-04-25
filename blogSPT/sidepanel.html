@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlogSPT</title>
+
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="styles/sidepanel.css" />
+  <!-- 설정 페이지 전용 -->
+  <link rel="stylesheet" href="styles/settings.css" />
+  <!-- 로그인 페이지 스타일 -->
+  <link rel="stylesheet" href="styles/login.css" />
+
+  <!-- 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 아이콘 -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+
+<body>
+  <div class="container">
+    <!-- 사이드바 -->
+    <aside class="sidebar">
+      <a href="#home" class="sidebar-icon home-icon">
+        <i class="fas fa-home"></i>
+      </a>
+
+      <div class="sidebar-icons">
+        <a href="#write" class="sidebar-icon"><i class="fas fa-pen"></i></a>
+        <a href="#ai" class="sidebar-icon"><i class="fas fa-robot"></i></a>
+        <a href="#settings" class="sidebar-icon">
+          <i class="fas fa-user"></i>
+        </a>
+      </div>
+    </aside>
+
+    <!-- 메인 컨텐츠 -->
+    <main class="main-content">
+      <!-- 로그인 페이지 -->
+      <section id="login" class="page active">
+        <div class="login-container">
+          <div class="login-box">
+            <div class="login-header">
+              <div class="logo-icon">
+                <i class="fas fa-blog"></i>
+              </div>
+              <h1>BlogSPT</h1>
+              <p>체험단 리뷰 작성 도우미</p>
+            </div>
+
+            <form id="loginForm" class="login-form">
+              <div class="form-group">
+                <input type="email" id="userId" placeholder="아이디" required />
+              </div>
+              <div class="form-group">
+                <input type="password" id="userPassword" placeholder="비밀번호" required />
+              </div>
+              <div class="form-group check-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="autoLogin" checked />
+                  <span>자동로그인</span>
+                </label>
+              </div>
+              <button type="submit" class="login-button">로그인</button>
+
+              <div class="login-options">
+                <button type="button" id="naverLoginBtn" class="naver-login">
+                  <i class="fas fa-n"></i>
+                  네이버 로그인
+                </button>
+              </div>
+
+              <div class="login-links">
+                <a href="#" id="findId">아이디찾기</a>
+                <span>|</span>
+                <a href="#" id="findPassword">비밀번호찾기</a>
+                <span>|</span>
+                <a href="#" id="register">회원가입</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Home -->
+      <section id="home" class="page">
+        <div class="home-header">
+          <p class="welcome-text">안녕하세요, <span id="userName" class="user-name">사용자</span>님!</p>
+          <button id="logoutBtn" class="logout-btn">로그아웃</button>
+        </div>
+        
+        <div class="schedule-section">
+          <h3>이번 달 일정</h3>
+          <div class="calendar-container">
+            <div class="calendar-header">
+              <span class="month-display">2025년 4월</span>
+              <div class="calendar-nav">
+                <button class="calendar-nav-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="calendar-nav-btn"><i class="fas fa-chevron-right"></i></button>
+              </div>
+            </div>
+            <div class="calendar-grid">
+              <div class="weekday">SUN</div>
+              <div class="weekday">MON</div>
+              <div class="weekday">TUE</div>
+              <div class="weekday">WED</div>
+              <div class="weekday">THU</div>
+              <div class="weekday">FRI</div>
+              <div class="weekday">SAT</div>
+              
+              <!-- 실제 날짜들 -->
+              <div class="day prev-month">30</div>
+              <div class="day prev-month">31</div>
+              <div class="day">1</div>
+              <div class="day">2</div>
+              <div class="day">3</div>
+              <div class="day">4</div>
+              <div class="day">5</div>
+              <div class="day">6</div>
+              <div class="day">7</div>
+              <div class="day">8</div>
+              <div class="day">9</div>
+              <div class="day">10</div>
+              <div class="day has-event">11<span class="event-dot"></span></div>
+              <div class="day">12</div>
+              <div class="day">13</div>
+              <div class="day">14</div>
+              <div class="day">15</div>
+              <div class="day has-event">16<span class="event-dot"></span></div>
+              <div class="day">17</div>
+              <div class="day">18</div>
+              <div class="day">19</div>
+              <div class="day">20</div>
+              <div class="day">21</div>
+              <div class="day">22</div>
+              <div class="day">23</div>
+              <div class="day has-event">24<span class="event-dot"></span></div>
+              <div class="day">25</div>
+              <div class="day">26</div>
+              <div class="day">27</div>
+              <div class="day">28</div>
+              <div class="day">29</div>
+              <div class="day">30</div>
+              <div class="day next-month">1</div>
+              <div class="day next-month">2</div>
+              <div class="day next-month">3</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tasks-section">
+          <h3>이번 달 할 일</h3>
+          <div class="tasks-container">
+            <div class="campaign-items"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Write(미션 체크 등) -->
+      <section id="write" class="page">
+        <h2>리뷰 작성 중…</h2>
+        <p>TODO: 실시간 미션 체크 UI</p>
+      </section>
+
+      <!-- AI 도우미 -->
+      <section id="ai" class="page">
+        <h2>AI 글쓰기 도우미</h2>
+        <p>TODO: 프롬프트 입력 UI</p>
+      </section>
+
+      <!-- Settings -->
+      <section id="settings" class="page">
+        <h2>사용자 기본 정보</h2>
+
+        <form id="profileForm" class="settings-form">
+          <label>
+            나이대
+            <select id="ageRange">
+              <option value="">선택…</option>
+              <option>10대</option>
+              <option>20대</option>
+              <option>30대</option>
+              <option>40대</option>
+              <option>50대 이상</option>
+            </select>
+          </label>
+
+          <label>
+            결혼 유무
+            <select id="maritalStatus">
+              <option value="">선택…</option>
+              <option>미혼</option>
+              <option>기혼</option>
+            </select>
+          </label>
+
+          <label>
+            거주 지역
+            <input type="text" id="region" placeholder="예) 서울 강남" />
+          </label>
+
+          <label>
+            자녀 유무
+            <select id="hasChildren">
+              <option value="">선택…</option>
+              <option>없음</option>
+              <option>있음</option>
+            </select>
+          </label>
+
+          <button type="button" id="saveProfile" class="primary-btn">
+            저장
+          </button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <!-- 스크립트 -->
+  <script src="scripts/naver_login.js"></script>
+  <script src="scripts/sidepanel.js"></script>
+  <script src="scripts/settings.js"></script>
+</body>
+</html>

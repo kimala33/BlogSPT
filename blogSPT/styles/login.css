@@ -1,0 +1,214 @@
+/* 로그인 페이지 전용 스타일 */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 98px; /* 사이드바 두 번째와 세 번째 아이콘 사이 높이로 조정 */
+  height: 100%;
+  width: 100%;
+  padding: 98px 20px 20px;
+}
+
+.login-box {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 280px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.login-header {
+  margin-bottom: 24px;
+}
+
+.logo-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background-color: #6200EA;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon i {
+  font-size: 28px;
+}
+
+.login-header h1 {
+  font-size: 24px;
+  color: #6200EA;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.login-header p {
+  color: #666;
+  font-size: 14px;
+}
+
+.login-form .form-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  border-color: #6200EA;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(98, 0, 234, 0.1);
+}
+
+.check-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  background-color: #6200EA;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 42px;
+}
+
+.login-button:hover {
+  background-color: #5000c7;
+}
+
+.login-options {
+  margin-top: 8px;
+}
+
+.naver-login {
+  width: 100%;
+  padding: 10px;
+  background-color: #03C75A;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 42px;
+}
+
+.naver-login:hover {
+  background-color: #02b351;
+}
+
+.naver-login i {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.login-links {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  width: 100%;
+  flex-wrap: nowrap;
+  overflow: visible;
+}
+
+.login-links a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-links a:hover {
+  color: #6200EA;
+}
+
+.login-links span {
+  margin: 0 6px;
+  color: #ddd;
+}
+
+/* 로그인 페이지와 사이드바 동시 표시 관련 */
+#login.page {
+  padding: 0;
+}
+
+#login.active.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 홈 헤더 및 로그아웃 버튼 스타일 */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.welcome-text {
+  font-size: 14px;
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.user-name {
+  color: #6200EA;
+  font-weight: 700;
+}
+
+.logout-btn {
+  font-size: 11px;
+  color: #6200EA;
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.logout-btn:hover {
+  opacity: 1;
+  text-decoration: underline;
+}

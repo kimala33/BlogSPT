@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "BlogSPT",
+  "version": "1.1.0",
+  "description": "네이버 블로그 체험단 리뷰 작성을 도와주는 AI 도우미",
+  "permissions": ["sidePanel", "storage", "tabs", "activeTab", "scripting", "identity"],
+  "host_permissions": ["https://nid.naver.com/", "https://openapi.naver.com/"],
+  "side_panel": { "default_path": "sidepanel.html" },
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": {
+    "default_title": "BlogSPT 열기",
+    "default_icon": "icons/icon.svg"
+  },
+  "icons": { "128": "icons/icon.svg" },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Ctrl+Shift+B", "mac": "Command+Shift+B" },
+      "description": "BlogSPT 사이드패널 열기"
+    }
+  }
+}
